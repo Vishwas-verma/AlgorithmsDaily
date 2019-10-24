@@ -17,7 +17,7 @@ public class missing_number_ngnishchay191 {
 		
 		int sum = 0;
 		
-		for(int i = 0; i < n; i++) {
+		for(int i = 1; i < n; i++) {
 			int temp = scan.nextInt();
 			sum = sum + temp;
 		}
