@@ -1,0 +1,44 @@
+/*
+This is a sample file explaining the format of your code. Do not make any changes to the file.
+Author : <ArunTeltia>
+College : <Maharaja Agarsen Institute of Technology Delhi>
+Year/Department : <2nd Year>/<CSE>
+E-Mail Id : <teltia.arun18@gmail.com>
+
+Insert Your Code Here
+*/
+class Seive{
+    void Eratosthenes(int n){
+        boolean Array[]=new boolean[n+1];    //consider a boolean array
+//        Arrays.fill(Array,true);
+        for(int i=0;i<=n;i++){
+            Array[i]=true;
+
+        }
+        for(int p=2;p*p<=n;p++){
+            if(Array[p]==true){
+                for(i=p*p;i<=n;i+=p){
+                    Array[i]=false;              //false for multiples of p
+                    System.out.println(i);
+                }
+            }
+        }
+
+        for(i=2;i<=n;i++){
+            if(Array[i]==true)
+                System.out.println("Prime numbers are" + i) ;             //printn all prime numbers
+        }
+
+
+
+    }
+    public static void main(String args[]){
+        int n;
+
+        Scanner scn=new Scanner(System.in);
+        System.out.println("enter  number n to check prime number smaller than or equal to thet number");
+        n=scn.nextInt();
+        Sieve s=new Sieve();
+        s.Eratosthenes(n);
+    }
+}
